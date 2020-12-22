@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/walpapers"
+    tools:context=".PresenceActivity">
+
+
+    <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="id"
+         android:id="@+id/id"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"/>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="time"
+         android:id="@+id/time"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:text="Smart Presence"
+        android:textSize="25dp"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/aclonica"
+        android:text="( PT. Usaha Gas Mandiri )"
+        android:textColor="#02FF0C"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#5410106A"
+        android:layout_margin="10dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="NIK"
+            android:textColor="#FFEB3B" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="name"
+            android:textColor="#FFEB3B" />
+
+        <TextView
+            android:id="@+id/txtJarak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aclonica"
+            android:text="jarak"
+            android:textColor="#FDFDAD0D"
+            android:textSize="15sp" />
+
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/chonburi"
+            android:gravity="center"
+            android:text="date"
+            android:textColor="#F7F7F8"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:background="#5410106A"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout1">
+
+        <Button
+            android:id="@+id/checkin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="100dp"
+            android:background="@android:color/holo_orange_light"
+            android:drawableLeft="@drawable/cek"
+            android:fontFamily="@font/aclonica"
+            android:gravity="center"
+            android:onClick="checkin"
+            android:padding="10dp"
+            android:text="Check In" />
+
+        <TextView
+            android:id="@+id/txtin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_save"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Anda telah Check In"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <TextView
+            android:id="@+id/txtbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="( Di Luar Jangkauan Anda Tidak Dapat Absen )"
+            android:textColor="@android:color/primary_text_dark_nodisable"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtin" />
+
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="100dp"
+            android:background="@android:color/holo_orange_light"
+            android:drawableLeft="@drawable/cek"
+            android:fontFamily="@font/aclonica"
+            android:onClick="checkout"
+            android:padding="10dp"
+            android:text="Check Out" />
+
+        <TextView
+            android:id="@+id/txtout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableBottom="@drawable/ic_save"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Anda telah Check Out"
+            android:textColor="@android:color/holo_orange_light" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="220dp"
+        android:background="@android:color/holo_green_light"
+        android:drawableRight="@drawable/info"
+        android:fontFamily="@font/aclonica"
+        android:onClick="about"
+        android:paddingRight="10dp"
+        android:text="About us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout2" />
+
+    <Button
+        android:id="@+id/profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/holo_green_light"
+        android:drawableLeft="@drawable/profil"
+        android:fontFamily="@font/aclonica"
+        android:onClick="profil"
+        android:paddingLeft="10dp"
+        android:text="Profil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout2" />
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="35dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profil"/>
+
+    <TextView
+        android:id="@+id/reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/audiowide"
+        android:gravity="center"
+        android:text="Smart Presence"
+        android:textColor="#FFEB3B"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

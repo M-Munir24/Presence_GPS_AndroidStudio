@@ -1,0 +1,2 @@
+rootProject.name='Presensi_AppGPS'
+include ':app'
